@@ -19,16 +19,16 @@ module.exports.loop = function () {
       roleBuilder.run(creep);
     }
   }
-  if (Game.spawns["Spawn1"].energy >= 150) {
+  if (Game.spawns["Buggy Land Home"].energy >= 150) {
     spawnRandom = Math.floor(Math.random() * 3);
     if (spawnRandom == 0) {
-      Game.spawns["Spawn1"].spawnCreep([WORK, CARRY, MOVE], "Upgrader" + upgraders, {memory: {role: "upgrader"}});
+      Game.spawns["Buggy Land Home"].spawnCreep([WORK, CARRY, MOVE], "Upgrader" + upgraders, {memory: {role: "upgrader"}});
       upgraders++;
     } else if (spawnRandom == 1) {
-      Game.spawns["Spawn1"].spawnCreep([WORK, CARRY, MOVE], "Harvester" + harvesters, {memory: {role: "harvester"}});
+      Game.spawns["Buggy Land Home"].spawnCreep([WORK, CARRY, MOVE], "Harvester" + harvesters, {memory: {role: "harvester"}});
       harvesters++;
     } else {
-      Game.spawns["Spawn1"].spawnCreep([WORK, CARRY, MOVE], "Builder" + builders, {memory: {role: "builder"}});
+      Game.spawns["Buggy Land Home"].spawnCreep([WORK, CARRY, MOVE], "Builder" + builders, {memory: {role: "builder"}});
       builders++;
     }
   }
